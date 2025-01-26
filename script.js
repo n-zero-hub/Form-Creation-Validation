@@ -1,18 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Select the form and feedback division
+document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("registration-form");
     const feedbackDiv = document.getElementById("form-feedback");
   
-    // Add event listener for form submission
-    form.addEventListener("submit", (event) => {
-      event.preventDefault(); // Prevent default form submission
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
   
-      // Retrieve and trim input values
       const username = document.getElementById("username").value.trim();
       const email = document.getElementById("email").value.trim();
       const password = document.getElementById("password").value.trim();
   
-      // Initialize validation variables
       let isValid = true;
       const messages = [];
   
